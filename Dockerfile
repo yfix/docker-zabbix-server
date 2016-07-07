@@ -20,7 +20,6 @@ RUN cd /tmp \
     binutils \
     cpp \
     gcc \
-    php-dev \
   \
   && apt-get clean -y \
   && rm -rf /var/lib/apt/lists/* \
