@@ -2,8 +2,8 @@ FROM yfix/baseimage
 
 MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 
-RUN pkg="zabbix-release_3.0-1+trusty_all.deb" \
-  && wget -O http://repo.zabbix.com/zabbix/3.0/ubuntu/pool/main/z/zabbix-release/$pkg | dpkg -i $pkg \
+RUN pkg_name="zabbix-release_3.0-1+trusty_all.deb" \
+  && cd /tmp && wget -q http://repo.zabbix.com/zabbix/3.0/ubuntu/pool/main/z/zabbix-release/$pkg && dpkg -i $pkg && rm -v $pkg \
   && apt-get update \
   && apt-get install -y --no-install-recommends \
     zabbix-server-mysql \
