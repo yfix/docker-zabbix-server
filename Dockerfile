@@ -12,7 +12,7 @@ RUN cd /tmp \
     zabbix-server-mysql \
   \
   && apt-get purge -y --auto-remove \
-    mysql-common \
+    mysql-client \
     apache2-bin \
     autoconf \
     automake \
