@@ -32,5 +32,4 @@ VOLUME ["/usr/lib/zabbix/alertscripts", "/usr/lib/zabbix/externalscripts", "/etc
 
 EXPOSE 10051 10052
 
-ENTRYPOINT ["/bin/docker-zabbix"]
-CMD ["run"]
+ENTRYPOINT ["/usr/sbin/zabbix_server"]
