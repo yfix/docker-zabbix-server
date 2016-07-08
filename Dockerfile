@@ -27,6 +27,8 @@ RUN cd /tmp \
   && rm -rf /usr/{{lib,share}/share/{man,doc,info,gnome/help,cracklib},{lib,lib64}/gconv} \
   \
   && echo "==== Done ==="
+
+USER zabbix
   
 COPY docker /
 
@@ -34,4 +36,4 @@ VOLUME ["/usr/lib/zabbix/alertscripts", "/usr/lib/zabbix/externalscripts", "/etc
 
 EXPOSE 10051 10052
 
-ENTRYPOINT ["/usr/sbin/zabbix_server"]
+ENTRYPOINT ["/usr/sbin/zabbix_server","-f"]
