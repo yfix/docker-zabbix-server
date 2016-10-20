@@ -4,7 +4,7 @@ MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 
 RUN cd /tmp \
   && pkg="zabbix-release_3.2-1+xenial_all.deb" \
-  && wget -q http://repo.zabbix.com/zabbix/3.2/debian/pool/main/z/zabbix-release/$pkg \
+  && wget -q http://repo.zabbix.com/zabbix/3.2/ubuntu/pool/main/z/zabbix-release/$pkg \
   && dpkg -i $pkg \
   \
   && apt-get update \
