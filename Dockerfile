@@ -1,10 +1,10 @@
-FROM yfix/baseimage
+FROM yfix/baseimage:16.04
 
 MAINTAINER Yuri Vysotskiy (yfix) <yfix.dev@gmail.com>
 
 RUN cd /tmp \
-  && pkg="zabbix-release_3.0-1+trusty_all.deb" \
-  && wget -q http://repo.zabbix.com/zabbix/3.0/ubuntu/pool/main/z/zabbix-release/$pkg \
+  && pkg="zabbix-release_3.2-1+xenial_all.deb" \
+  && wget -q http://repo.zabbix.com/zabbix/3.2/debian/pool/main/z/zabbix-release/$pkg \
   && dpkg -i $pkg \
   \
   && apt-get update \
